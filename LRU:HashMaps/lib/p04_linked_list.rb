@@ -38,11 +38,11 @@ class LinkedList
   end
 
   def first
-    empty? ? nil : @head.next
+    @head.next
   end
 
   def last
-    empty? ? nil : @tail.prev
+    @tail.prev
   end
 
   def empty?
@@ -50,12 +50,16 @@ class LinkedList
   end
 
   def get(key)
-    each { |node| return node.val if node.key == key }
+    self.each do |node|
+      if node.key == key
+        return node.val
+      end
+    end
     nil
   end
 
   def include?(key)
-    any? { |node| node.key == key }
+    self.any? { |node| node.key == key }
   end
 
   def append(key, val)
@@ -70,7 +74,7 @@ class LinkedList
   end
 
   def update(key, val)
-    each do |node|
+    self.each do |node|
       if node.key == key
         node.val = val
         return node
@@ -79,7 +83,7 @@ class LinkedList
   end
 
   def remove(key)
-    each do |node|
+    self.each do |node|
       if node.key == key
         node.remove
         return node.val
