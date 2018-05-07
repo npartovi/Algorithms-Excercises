@@ -25,7 +25,7 @@ class MaxIntSet
 
   def validate!(num)
   end
-end
+end 
 
 
 class IntSet

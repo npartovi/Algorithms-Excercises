@@ -25,8 +25,8 @@ class DynamicArray
   # O(1)
   def pop
     empty?
-    @length -= 1
     @store[@length]
+    @length -= 1
   end
 
   # O(1) ammortized; O(n) worst case. Variable because of the possible

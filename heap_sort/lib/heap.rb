@@ -26,6 +26,7 @@ class BinaryMinHeap
   end
 
   def peek
+    
   end
 
   def push(val)
