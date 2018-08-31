@@ -17,7 +17,7 @@ class BinaryMinHeap
 
     if count > 1
       store[0] = store.pop
-      self.class.heapify_down(store, 0, count)
+      BinaryMinHeap.heapify_down(store, 0, count)
     else
       store.pop
     end
@@ -51,7 +51,7 @@ class BinaryMinHeap
   def self.heapify_down(array, parent_idx, len = array.length, &prc)
     prc ||= Proc.new { |x,y| x <=> y}
 
-    left, right = child_indices(len, parent_idx)
+    left, right = BinaryMinHeap.child_indices(len, parent_idx)
     parent_value = array[parent_idx]
 
     results = []

@@ -41,8 +41,9 @@ class QuickSort
 
     range.each do |idx|
       if prc.call(pivot_el, array[idx]) > 0
-        array[pivot_idx + 1], array[idx] = array[idx], array[pivot_idx + 1]
         pivot_idx += 1
+        array[pivot_idx], array[idx] = array[idx], array[pivot_idx]
+        
       end
     end
     
