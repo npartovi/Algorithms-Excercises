@@ -6,5 +6,18 @@
   <button>Me!</button>
   <script>
     
+    $('button').on('click', () => {
+      console.log("hello")
+    })
+
+    $('button').on('click', () => {
+      console.log("there")
+    })
+
+    $('button').trigger('click')
+
+    $('button').off('click')
+
+
   </script>
 </body>
