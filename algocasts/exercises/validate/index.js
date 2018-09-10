@@ -13,6 +13,7 @@ function validate(node, min = null, max = null) {
 
     if(min !== null && node.data < min){
         return false
+        
     }
 
     if(node.left && !validate(node.left, min, node.data)){
